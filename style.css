@@ -131,17 +131,26 @@ body {
     box-shadow: rgb(190, 61, 255) 0px 4px 15px 0px;
   }
 
+/* Workout Selection screen */
 
 
 .selection {
-    margin-top: 50px;
     padding: 0;
     display: flex;
-    position: absolute;
     flex-direction: column;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+}
+
+.selection-h1 {
+    font-size: 3em;
+    color: white;
+    margin: 20px;
+    padding: 20px;
+    width: 100%;
+    margin: 3px;
+    text-align: center;
+
 }
 
 .selection li {
