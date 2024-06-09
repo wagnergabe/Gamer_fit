@@ -100,8 +100,42 @@ body {
 }
 
 /*Review Card*/
-.review-image img {
-height: 50%;
+
+.review-card {
+    width: 80%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 20px 50px 20px;
+    padding: 20px;
+    border: 3px solid blueviolet;
+    box-shadow: 14px 14px 0 -4px blueviolet, 14px 14px 0 0 black;
+    background-color: lightgreen;
+}
+
+.review-image  {
+height: 750%;
+width: 70%;
+margin: 0 5px;
+border-radius: 5px;
+}
+
+#stars {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+
+}
+
+.review-text {
+font-size: 2em;
+margin: 10px;
+}
+
+footer {
+    background-color: chartreuse;
 }
 
 
@@ -184,6 +218,17 @@ height: 50%;
 }
 
 /* Workout Selection screen */
+
+.workout-header {
+    color: rgb(21, 148, 252);
+    white-space: nowrap;
+    font-size: 6em;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey,
+      1px 5px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 8px 0 grey,
+      5px 13px 15px black;
+  }
 
 
 .selection {
@@ -274,7 +319,7 @@ height: 50%;
     background-color: rgb(21, 148, 252);
     margin: 10px 20px;
     padding: 10px;
-    border: px solid purple;
+    border: 3px solid purple;
     border-radius: 3px;
     box-shadow: 14px 14px 0 -4px blueviolet, 14px 14px 0 0 black;
     border-radius: 3px;
@@ -367,12 +412,14 @@ height: 50%;
 }
   
 @media (width <= 1250px) {
-    .card {
+    .card, .review-card {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
   }
+
+
 
 
 

@@ -1,62 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Fit</title>
     <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
     <!-- nav bar -->
     <div class="nav">
         <img src="/assets/images/game_flex.png" alt="Game Flex Logo">
 
-        
-            <a href="home">Home</a>
-            <a href="workouts">Workouts</a>
-            <a href="nutrition">Nutrition</a>
-            <a href="login">Login</a>
-      </div>
+
+        <a href="home">Home</a>
+        <a href="workouts">Workouts</a>
+        <a href="nutrition">Nutrition</a>
+        <form action="/logout" method="post">
+            <button type="submit" class="logout-btn">Logout</button>
+    </div>
 
 
-        <!-- hero section -->
-        <div class="main">
+    <!-- hero section -->
+    <div class="main">
         <div class="card">
             <div class="hero-text">
                 <h1>Unleash Your Strength and Dominate the Game</h1>
-                <p>Combine your passion for weight lifting with your love for gaming and level up your fitness journey. Join our community and expierence the ultimate power-up.</p>
-                <a href="workouts.ejs"><button class="btn btn-moving-gradient btn-moving-gradient--blue">START</button></a>
+                <p>Combine your passion for weight lifting with your love for gaming and level up your fitness journey.
+                    Join our community and expierence the ultimate power-up.</p>
+                <a href="workouts.ejs"><button
+                        class="btn btn-moving-gradient btn-moving-gradient--blue">START</button></a>
             </div>
-                <img src="./assets/images/gamer_man.jpg" alt="gamer gym man">
-            </div>
+            <img src="./assets/images/gamer_man.jpg" alt="gamer gym man">
+        </div>
 
-           <div class="card">
-                        <img src="./assets/images/girl-gym.jpg" alt="gamer gym girl">
-                    <div class="hero-text">
-                        <h1>Level up your fitness</h1>
-                        <p>Discover the power of fitness and gaming, improve your focus, enhance your reflexes, and join a strong community of like-minded gamers.</p>
-                    </div>
-                    </div> 
-              
-
-            <div class="card">
-                <div class="hero-text">
-                    <h1>Start Your Fitness Journey Today</h1>
-                    <p>Join our community and start your fitness journey. Get access to exclusive workouts, nutrition plans, and a community of like-minded gamers.</p>
-                </div>
+        <div class="card">
+            <img src="./assets/images/girl-gym.jpg" alt="gamer gym girl">
+            <div class="hero-text">
+                <h1>Level up your fitness</h1>
+                <p>Discover the power of fitness and gaming, improve your focus, enhance your reflexes, and join a
+                    strong community of like-minded gamers.</p>
             </div>
+        </div>
 
-            <div class="card">
-                <div class="review-image">
-                <img src="./assets/images/girl-gym.jpg " alt = "gamer gym">
-                </div>
-                <div class="hero-text">
-                    <p>*****</p>
-                    <p><em>I Was able to change my attitude from a Hadou-can't, to a hadou-CAN! Now I'm everybody's main!</em></p>
-                    
-                </div>
+
+        <div class="card">
+            <div class="hero-text">
+                <h1>Start Your Fitness Journey Today</h1>
+                <p>Join our community and start your fitness journey. Get access to exclusive workouts, nutrition plans,
+                    and a community of like-minded gamers.</p>
             </div>
-                </div>
-                    
+        </div>
+
+        <div class="review-card">
+            <div class="review-image">
+                <img src="./assets/images/ryu_review.png" alt="gamer gym">
+            </div>
+            <div class="review-text">
+                <p id="stars"> &#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p><em>Hadouken! Gamer Fit has transformed my training with dynamic workouts, customizable routines, and
+                        a supportive community. This app melds the discipline of martial arts with the excitement of
+                        gaming, pushing me to new heights. If you want to unleash your inner warrior and rise to the
+                        top, Gamer Fit is your ultimate training partner.</em></p>
+                <p>-Ryu</p>
+            </div>
+        </div>
+
+        <footer>
+          <img src="./assets/images/game_flex.png" alt="Game Flex Logo">
+                <p>&copy; 2021 Game Fit</p>
+
+        </footer>
+    </div>
+
 </body>
-</h
+
+</html>
