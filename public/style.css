@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
 
 * {
     margin: 0;
@@ -70,7 +71,7 @@ body {
 .card img {
     max-width: 50%;
     max-height: 50%;
-    object-fit:contain;
+    object-fit:cover;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
 }
@@ -97,6 +98,12 @@ body {
 .hero-text p {
     font-size: 2em;
 }
+
+/*Review Card*/
+.review-image img {
+height: 50%;
+}
+
 
 /* Button + effects*/
 
@@ -253,20 +260,34 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;;
-    width: 80%;
-    border: 3px solid blueviolet;
+    width: 60%;
+    border: 3px solid rgb(89, 61, 116);
+
     background-color: lightgreen;
     margin: 20px;
     padding: 20px;
 }
 
+.workout-container {
+    width: 70%;
+    height: 40%;
+    background-color: rgb(21, 148, 252);
+    margin: 10px 20px;
+    padding: 10px;
+    border: px solid purple;
+    border-radius: 3px;
+    box-shadow: 14px 14px 0 -4px blueviolet, 14px 14px 0 0 black;
+    border-radius: 3px;
+
+}
+
 .workout-button {
-    border: 3px solid black;
-    width: 100%;
-    margin: 3px;
+
+    width: 10;
     align-items: center;
     text-align: center;
 }
+
 
 .workout-button p {
     font-size: 5em;
@@ -276,13 +297,13 @@ body {
 }
 
 .workout-title {
-    font-size: 2em;
+    font-size: 3em;
     color: white;
-    margin: 20px;
+    font-family: "Original Surfer", sans-serif;
+    font-weight: 400;
     width: 100%;
-    margin: 5px;
     text-align: center;
-    text-decoration: underline;
+
 }
 
 
@@ -313,39 +334,45 @@ body {
 .workout-description {
     font-size: 1.5em;
     color: white;
-    margin: 20px;
+    margin: 20px 30px;
     border-bottom: 4px solid white;
-    width: 100%;
-    margin: 3px;
-    text-align: center;
+    width: 90%;
     padding: 10px;
 }
 
 .reps {
     font-size: 2em;
+    text-align: center;
+    margin: 10px;
 }
 
-.workout-description li {
-    text-decoration: none;
-    list-style-type: none;
-}
 
 #quote {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
-    font-size: 1.4em;
 }
 
 .workout-comment {
-    font-size: 1.4em;
+    display: flex;
+    font-size: 1.5em;
+    font-style: italic;
     text-align: center;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
+    margin-top: 15px;
+    flex-wrap: wrap;
+    padding-bottom: 1px;
     
 
 }
   
-
+@media (width <= 1250px) {
+    .card {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+  }
 
 
 
