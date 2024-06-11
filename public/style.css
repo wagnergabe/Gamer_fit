@@ -183,11 +183,28 @@ footer {
     
 }
 
+.login h2 {
+    font-size: 4em;
+}
+
+.login p {
+    font-size: 2em;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+
+}
 
 
 .form-container {
-   width: 400px;
-    height: 400px;
+    width: 60%;
+    height: 60%;
     background-color: lightgreen;
     display: flex;
     flex-direction: column;
@@ -197,24 +214,37 @@ footer {
     border: 5px solid blueviolet;
 }
 
+
 .form-group {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 10px 0
+    justify-content: center;
+    align-items: center;
+    font-size: 2.0em;
+    margin: 30px
 }
 
-.submit-btn {
-    width: 100%;
-    height: 30px;
+label {
+align-items: center;
+}
+
+#name, #password  {
+    font-size: 1em;
+}
+
+.form-container button {
+    
+    width: 60%;
+    height: 60px;
     background-color: blueviolet;
     color: white;
     font-size: 1.2em;
     border: none;
     cursor: pointer;
-    margin-top: 10px;
     border-radius: 20px;
+}
 
+form {
+    align-items: center;
 }
 
 /* Workout Selection screen */
@@ -409,6 +439,10 @@ footer {
     padding-bottom: 1px;
     
 
+}
+
+#red {
+    color: red;
 }
   
 @media (width <= 1250px) {

@@ -24,7 +24,7 @@ const store = new MongoDbSession({
     collection: 'mysessions'
 })
 
-
+console.log(store)
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -33,21 +33,20 @@ app.use(express.static("public"));
 
 app.use(
     session({
-    secret: 'key that will sign cookie',
+    secret: 'secrecookie',
     resave: false,
     saveUninitialized: false,
-    store: store,
 }))
 
 const isAuth = (req, res, next) => {
-if(req.session.isAuth) {
+if(req.session.authorized === true) {
     next();
 } else {
     res.redirect("login")
 }
 }
 
-app.get("/", isAuth, (req, res) => {
+app.get("/", (req, res) => {
     res.render("home")
 });
 
@@ -57,6 +56,10 @@ app.get("/workouts", isAuth, (req, res) => {
 
 app.get("/chest", isAuth, (req, res) => {
     res.render("chest")
+});
+
+app.get("/arms", isAuth, (req, res) => {
+    res.render("arms")
 });
 
 app.get("/signup", (req, res) => {
@@ -98,10 +101,11 @@ app.post("/login", async (req, res) => {
         }
         const isPasswordMatch = await bcrypt.compare(req.body.password, check.password);
         if (isPasswordMatch) {
+            req.session.authorized = true;
             res.render("home", { name: req.body.username})
-            req.session.isAuth = true;
         } else {
             res.redirect("login")
+            req.session.authorized = false;
         }
     }catch{
         res.send("wrong Details")
