@@ -31,6 +31,14 @@ app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
+if (proecess.env.NODE_ENV === 'production') { 
+    app.set(express.static(path.join(__dirname, 'client/build')))
+    app.getMaxListeners('*', (req, res) => {
+        res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
+    })
+
+}
+
 app.use(
     session({
     secret: 'secrecookie',
