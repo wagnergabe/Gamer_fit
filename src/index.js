@@ -1,5 +1,6 @@
 const express = require('express');
 const session = require('express-session');
+// const session = require('cookie-session');
 const MongoDbSession = require('connect-mongodb-session')(session);
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
@@ -36,17 +37,22 @@ app.use(
     secret: 'secrecookie',
     resave: false,
     saveUninitialized: false,
+    store: store,
 }))
 
 const isAuth = (req, res, next) => {
 if(req.session.authorized === true) {
     next();
 } else {
-    res.redirect("login")
+    res.render("login")
 }
 }
 
 app.get("/", (req, res) => {
+    res.render("login")
+});
+
+app.get("/home", isAuth, (req, res) => {
     res.render("home")
 });
 
@@ -66,7 +72,7 @@ app.get("/signup", (req, res) => {
     res.render("signup")
 });
 
-app.get("/login", (req, res) => {
+app.get("login", (req, res) => {
     res.render("login")
 });
 
@@ -114,7 +120,7 @@ app.post("/login", async (req, res) => {
 
 app.post('/logout', (req, res) => {
     req.session.destroy();
-    res.redirect('login')
+    res.redirect("/")
 })
 
 
