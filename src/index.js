@@ -121,7 +121,7 @@ app.post("/login", async (req, res) => {
             req.session.authorized = false;
         }
     }catch{
-        res.send("wrong Details")
+        res.send("Something went wrong")
     }
 })
 
