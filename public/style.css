@@ -450,6 +450,16 @@ form {
         align-items: center;
         justify-content: center;
     }
+
+    .review-card {
+        margin: 0;
+    }
+
+    .workout-images img{
+        width: 200px;
+        height: 300px;
+    
+    }
   }
 
 
