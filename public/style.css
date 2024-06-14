@@ -440,9 +440,13 @@ form {
 
 }
 
+
+
 #red {
     color: red;
 }
+
+
   
 @media (width <= 1250px) {
     .card, .review-card {

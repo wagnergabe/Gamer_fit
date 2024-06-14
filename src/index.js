@@ -80,6 +80,8 @@ app.get("/login", (req, res) => {
     res.render("login")
 });
 
+
+
 app.post("/signup", async (req, res) => {
     
     // const data = {
