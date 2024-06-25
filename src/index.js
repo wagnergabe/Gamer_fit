@@ -72,6 +72,14 @@ app.get("/back", isAuth, (req, res) => {
     res.render("back")
 });
 
+app.get("/legs", isAuth, (req, res) => {
+    res.render("legs")
+});
+
+app.get("/shoulders", isAuth, (req, res) => {
+    res.render("shoulders")
+});
+
 app.get("/signup", (req, res) => {
     res.render("signup")
 });
