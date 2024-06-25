@@ -80,6 +80,10 @@ app.get("/shoulders", isAuth, (req, res) => {
     res.render("shoulders")
 });
 
+app.get("/nutrition", isAuth, (req, res) => {    
+    res.render("nutrition")
+});
+
 app.get("/signup", (req, res) => {
     res.render("signup")
 });

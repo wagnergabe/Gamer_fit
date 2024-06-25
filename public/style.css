@@ -23,6 +23,17 @@ h2 a {
     cursor: pointer;
 }
 
+h2 {
+    font-size: 3em;
+    color: white;
+    margin: 20px;
+    padding: 20px;
+    width: 100%;
+    margin: 3px;
+    text-align: center;
+
+}
+
 .nav  {
     display: flex;
     flex-direction: row;
@@ -132,7 +143,7 @@ border-radius: 5px;
 }
 
 #stars {
-    display: flex;
+    display: flex-block;
     flex-direction: row;
     justify-content: center;
     margin: 10px;
@@ -145,7 +156,18 @@ margin: 10px;
 }
 
 footer {
-    background-color: chartreuse;
+    display: flex;
+    align-items: space-between;
+   
+    gap: 800px;
+
+}
+
+footer p {
+    font-size: 2em;
+    background-color: blueviolet;
+    padding: 5px 10px;
+    border: 1px solid blue;
 }
 
 
