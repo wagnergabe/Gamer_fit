@@ -135,10 +135,13 @@ h2 {
     background-color: lightgreen;
 }
 
-.review-image  {
+.review-image {
+display: flex;
+justify-content: center;
+align-items: center;
 height: 750%;
 width: 70%;
-margin: 0 5px;
+margin: 40px 10px;
 border-radius: 5px;
 }
 
