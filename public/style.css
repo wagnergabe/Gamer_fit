@@ -218,6 +218,19 @@ footer p {
     
 }
 
+input[type="text"],
+input[type="password"] {
+    width: 300px;  /* Adjust the width as needed */
+    height: 40px;  /* Adjust the height as needed */
+    padding: 5px;  /* Optional: Add padding for better spacing inside the box */
+    font-size: 16px; /* Optional: Increase font size for better readability */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    border: 1px solid rgb(114, 29, 194); /* Optional: Border styling */
+}
+.form-group label{
+    margin: 3px 5px;
+}
+
 .login h2 {
     font-size: 4em;
 }
